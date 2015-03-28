@@ -44,7 +44,7 @@ int main()
 			    num3 = (rand())% 9 + 1;				
 			}
 			// This part let user guess and judge it.
-
+			cout<<num1<<num2<<num3<<endl;
 			while (i<=7)
 			{
 				// If i==7, that means the user has already guessed 7 times without get 3A, so he lose.
@@ -62,13 +62,6 @@ int main()
 				// input the number you guessed.
 			    cout << "input your number" << endl;
 			    cin >> a >> b >> c;
-			    while (!cin)
-			    {
-			    	cin.clear();
-					cin.sync();
-					cout << "make sure that you are inputing a integer" << endl << "now input your number";
-					cin >> a >> b >> c;
-				}
 			    // only if 2 ints(a,b) are equal can (a/b)*(b/a)=1, we use this to find A.
 			    A = (num1 / a) * (a / num1) + (num2 / b) * (b / num2) + (num3 / c) * (c / num3) ;
 			    // find B
@@ -83,7 +76,7 @@ int main()
 			    }
 			    else 
 				{
-					// give the user the 
+					// give the user the right answer
 			    	cout << A << "A" << B << "B" << endl;
 				}
 					
